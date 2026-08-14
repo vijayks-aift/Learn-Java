@@ -1,0 +1,27 @@
+class Shape{
+    public void getarea(){
+        System.out.println("The shape of objects.");
+    }
+    
+}
+
+class Rectangle extends Shape {
+    @Override
+    public void getarea(){
+        int l = 10;
+        int b = 20;
+        int a = l*b ;
+        System.out.println("The Area of Rectangle:"+a);
+    }
+}
+
+public class Main{
+    public static void main(String[] args){
+        Shape ani = new Shape();
+        Rectangle rec = new Rectangle();
+        
+        ani.getarea();
+        rec.getarea();
+    }
+}
+
