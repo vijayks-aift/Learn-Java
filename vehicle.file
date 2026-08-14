@@ -1,0 +1,24 @@
+class Vehicle {
+    public void drive(){
+        System.out.println("Repairing the vehicle.");
+    }
+    
+}
+
+class Car extends Vehicle {
+    @Override
+    public void drive(){
+        System.out.println("Repairing a car.");
+    }
+}
+
+public class Main{
+    public static void main(String[] args){
+        Vehicle ani = new Vehicle();
+        Car ca = new Car();
+        
+        ani.drive();
+        ca.drive();
+    }
+}
+
