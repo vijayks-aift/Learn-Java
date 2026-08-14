@@ -1,0 +1,62 @@
+Animal
+class Animal {
+    String Category;
+
+    Animal(String category) {
+        this.Category = category;
+    }
+
+    void showcategory() {
+        System.out.println("Category: " + Category);
+    }
+}
+
+class Birds extends Animal {
+
+    static String place = "Amazon Forest";
+
+    String Bird_name;
+    String Migration_type;
+
+    Birds(String category, String Bird_name, String Migration_type) {
+        super(category);
+        this.Bird_name = Bird_name;
+        this.Migration_type = Migration_type;
+ 
+    }
+        //Instance method
+    void displayBirds() {
+        //calling parent class mathod
+        super.showcategory();
+
+        System.out.println("Place : " + place);
+        System.out.println("Bird Name : " + Bird_name);
+        System.out.println("Migration type : " + Migration_type);
+ 
+    }
+
+    static void showplace() {
+        System.out.println("Place : " + place);
+    }
+}
+//Main Class
+public class Main {
+
+    public static void main(String[] args) {
+
+        Birds.showplace();
+
+        System.out.println();
+
+        Birds b1 = new Birds("Birds", "Flamingo", "Migrating Bird");
+        Birds b2 = new Birds("Birds", "Woodpecker", "Non Migrating Bird");
+
+        System.out.println("Bird 1 Details");
+        b1.displayBirds();
+
+        System.out.println();
+
+        System.out.println("Bird 2 Details");
+        b2.displayBirds();
+    }
+}
